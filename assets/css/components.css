@@ -175,7 +175,10 @@ a.tag:hover { border-color: var(--colour-accent); color: var(--colour-ink); }
   margin: 0.75rem 0 1rem;
 }
 
-.detail-section h2 { margin-top: 0; }
+.detail-section h2 {
+  margin-top: 0;
+  color: var(--colour-section-heading);
+}
 .detail-section { margin-bottom: 2.25rem; }
 
 .callout {

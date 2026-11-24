@@ -13,6 +13,7 @@
   --colour-accent: #2f6b4f;
   --colour-accent-dark: #22513b;
   --colour-accent-soft: #e3efe8;
+  --colour-section-heading: #2f6b4f;   /* "What is it?", "Why is it used?" etc. */
 
   /* Safety label colours */
   --colour-safe: #2f6b4f;
