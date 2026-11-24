@@ -1,4 +1,4 @@
-# What's In It?
+# InSight
 
 A plain-English guide to the ingredients in skincare, cosmetics, food, household products and paint, so people can understand what they're using and consuming.
 
@@ -12,7 +12,7 @@ A plain-English guide to the ingredients in skincare, cosmetics, food, household
 ## Folder structure
 
 ```
-whats-in-it/
+InSight/
 ├── index.html               Browse and search page (home)
 ├── ingredient.html          Single ingredient page (ingredient.html?id=...)
 ├── decoder.html             Label decoder page

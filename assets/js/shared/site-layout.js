@@ -3,7 +3,7 @@
    Edit the site name, menu links and footer text here, in one place.
    ========================================================================== */
 
-const SITE_NAME = "What's In It?";
+const SITE_NAME = "InSight";
 
 const NAV_LINKS = [
   { page: "home",    label: "Browse",        href: "index.html" },
