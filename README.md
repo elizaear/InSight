@@ -7,7 +7,7 @@ A plain-English guide to the ingredients in skincare, cosmetics, food, household
 - **Browse and search** ingredients by name, other names, or food additive number (e.g. `621` or `E621`)
 - **Filter by category**: skincare, cosmetics, food, household, paints
 - **Ingredient pages**: what it is, why it's used, safety and regulation, myth vs fact, and sources
-- **Label decoder**: paste a product's ingredient list and see which ingredients are explained
+- **Label decoder**: take or upload a photo of a label (read on-device with Tesseract.js), or paste an ingredient list, and see which ingredients are explained
 
 ## Folder structure
 
@@ -41,6 +41,7 @@ InSight/
 │           ├── home.js
 │           ├── ingredient.js
 │           ├── decoder.js
+│           ├── label-scanner.js   Reads text from label photos (Label decoder page)
 │           └── about.js
 │
 ├── docs/

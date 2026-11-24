@@ -15,11 +15,39 @@
   <main class="container container--narrow">
     <section class="page-intro">
       <p class="eyebrow">Label decoder</p>
-      <h1>Paste an ingredient list</h1>
+      <h1>Scan or paste an ingredient list</h1>
       <p class="lead">
-        Copy the ingredients from a product label or website and paste them below.
+        Take a photo of a product label, or paste the ingredients below.
         We'll pick out the ones in our guide and explain them.
       </p>
+    </section>
+
+    <!-- Photo scanner (assets/js/pages/label-scanner.js) -->
+    <section class="scanner" aria-labelledby="scanner-heading">
+      <h2 id="scanner-heading" class="scanner__heading">📷 Scan a label</h2>
+      <p class="scanner__tip">
+        For best results, hold the camera flat and close to the ingredient list, in good light.
+        Your photo stays on your device and is never uploaded.
+      </p>
+
+      <div class="scanner__actions">
+        <label class="button">
+          Take a photo
+          <input type="file" id="scanner-camera" accept="image/*" capture="environment" class="visually-hidden">
+        </label>
+        <label class="button button--ghost">
+          Upload a photo
+          <input type="file" id="scanner-upload" accept="image/*" class="visually-hidden">
+        </label>
+      </div>
+
+      <div class="scanner__status" id="scanner-status" aria-live="polite" hidden>
+        <img id="scanner-preview" class="scanner__preview" alt="Your label photo">
+        <div class="scanner__progress-wrap">
+          <p id="scanner-message" class="scanner__message"></p>
+          <div class="progress"><div class="progress__bar" id="scanner-progress"></div></div>
+        </div>
+      </div>
     </section>
 
     <form id="decoder-form" class="decoder">
@@ -43,5 +71,6 @@
   <script src="assets/js/shared/helpers.js"></script>
   <script src="assets/js/shared/site-layout.js"></script>
   <script src="assets/js/pages/decoder.js"></script>
+  <script src="assets/js/pages/label-scanner.js"></script>
 </body>
 </html>
