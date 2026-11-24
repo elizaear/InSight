@@ -1,0 +1,320 @@
+/* ==========================================================================
+   components.css — reusable pieces: search, chips, cards, badges, buttons.
+   ========================================================================== */
+
+/* ---------- Search box ---------- */
+
+.search input {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem 1.25rem;
+  font: inherit;
+  font-size: 1.1rem;
+  border: 2px solid var(--colour-line);
+  border-radius: var(--radius);
+  background: var(--colour-surface);
+  box-shadow: var(--shadow);
+}
+
+.search input:focus {
+  outline: none;
+  border-color: var(--colour-accent);
+}
+
+/* ---------- Category chips ---------- */
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.chip {
+  padding: 0.45rem 0.95rem;
+  font: inherit;
+  font-size: 0.95rem;
+  color: var(--colour-ink);
+  background: var(--colour-surface);
+  border: 1px solid var(--colour-line);
+  border-radius: var(--radius-small);
+  cursor: pointer;
+}
+
+.chip:hover { border-color: var(--colour-accent); }
+
+.chip[aria-pressed="true"] {
+  color: #fff;
+  background: var(--colour-accent);
+  border-color: var(--colour-accent);
+}
+
+.results-count {
+  color: var(--colour-muted);
+  font-size: 0.9rem;
+}
+
+/* ---------- Ingredient cards ---------- */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  color: inherit;
+  text-decoration: none;
+  background: var(--colour-surface);
+  border: 1px solid var(--colour-line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.card:hover {
+  color: inherit;
+  transform: translateY(-2px);
+  border-color: var(--colour-accent);
+}
+
+.card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.card__title { margin: 0; }
+
+.card__aliases {
+  margin: 0;
+  color: var(--colour-muted);
+  font-size: 0.85rem;
+}
+
+.card__summary {
+  margin: 0;
+  font-size: 0.97rem;
+  flex-grow: 1;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  padding: 2rem;
+  text-align: center;
+  color: var(--colour-muted);
+  background: var(--colour-surface);
+  border: 1px dashed var(--colour-line);
+  border-radius: var(--radius);
+}
+
+/* ---------- Tags and badges ---------- */
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tag {
+  padding: 0.15rem 0.6rem;
+  font-size: 0.8rem;
+  color: var(--colour-muted);
+  background: var(--colour-bg);
+  border: 1px solid var(--colour-line);
+  border-radius: var(--radius-small);
+  text-decoration: none;
+}
+
+a.tag:hover { border-color: var(--colour-accent); color: var(--colour-ink); }
+
+.code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  padding: 0.1rem 0.4rem;
+  background: var(--colour-accent-soft);
+  border-radius: 6px;
+}
+
+.badge {
+  flex-shrink: 0;
+  padding: 0.2rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+  border-radius: var(--radius-small);
+}
+
+.badge--safe       { color: var(--colour-safe);       background: var(--colour-safe-soft); }
+.badge--care       { color: var(--colour-care);       background: var(--colour-care-soft); }
+.badge--restricted { color: var(--colour-restricted); background: var(--colour-restricted-soft); }
+
+/* ---------- Ingredient page ---------- */
+
+.back-link {
+  display: inline-block;
+  margin: 2rem 0 1rem;
+  font-size: 0.95rem;
+}
+
+.detail-header { margin-bottom: 2rem; }
+
+.detail-header__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.detail-section h2 { margin-top: 0; }
+.detail-section { margin-bottom: 2.25rem; }
+
+.callout {
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--colour-line);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: var(--colour-surface);
+}
+
+.callout--safe       { border-color: var(--colour-safe); }
+.callout--care       { border-color: var(--colour-care); }
+.callout--restricted { border-color: var(--colour-restricted); }
+
+.myth {
+  margin-bottom: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: var(--colour-surface);
+  border: 1px solid var(--colour-line);
+  border-radius: var(--radius);
+}
+
+.myth p { margin: 0; }
+.myth__label { font-weight: 700; }
+.myth__claim { margin-bottom: 0.4rem !important; }
+
+.sidebar-box {
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  background: var(--colour-surface);
+  border: 1px solid var(--colour-line);
+  border-radius: var(--radius);
+}
+
+.sidebar-box h3 {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--colour-muted);
+}
+
+.sidebar-box ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.sidebar-box p:last-child { margin: 0; }
+
+/* ---------- Buttons and form fields ---------- */
+
+.button {
+  padding: 0.75rem 1.25rem;
+  font: inherit;
+  font-weight: 600;
+  color: #fff;
+  background: var(--colour-accent);
+  border: 2px solid var(--colour-accent);
+  border-radius: var(--radius-small);
+  cursor: pointer;
+}
+
+.button:hover { background: var(--colour-accent-dark); border-color: var(--colour-accent-dark); }
+
+.button--ghost {
+  color: var(--colour-accent);
+  background: transparent;
+}
+
+.button--ghost:hover { color: #fff; }
+
+.field-label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.decoder textarea {
+  width: 100%;
+  padding: 1rem;
+  font: inherit;
+  border: 2px solid var(--colour-line);
+  border-radius: var(--radius);
+  background: var(--colour-surface);
+  resize: vertical;
+}
+
+.decoder textarea:focus { outline: none; border-color: var(--colour-accent); }
+
+.decoder__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1rem 0 2rem;
+}
+
+/* ---------- Label decoder results ---------- */
+
+.decoder-summary {
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  background: var(--colour-accent-soft);
+  border-radius: var(--radius);
+}
+
+.decoder-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.decoder-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--colour-line);
+}
+
+.decoder-item__name { font-weight: 600; }
+.decoder-item__note { color: var(--colour-muted); font-size: 0.9rem; }
+.decoder-item--unknown .decoder-item__name { font-weight: 400; color: var(--colour-muted); }
+
+/* ---------- About page legend ---------- */
+
+.legend {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.legend__item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  background: var(--colour-surface);
+  border: 1px solid var(--colour-line);
+  border-radius: var(--radius);
+}
+
+.legend__item p { margin: 0; }

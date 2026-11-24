@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Label Decoder · What's In It?</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body data-page="decoder">
+  <div id="site-header"></div>
+
+  <main class="container container--narrow">
+    <section class="page-intro">
+      <p class="eyebrow">Label decoder</p>
+      <h1>Paste an ingredient list</h1>
+      <p class="lead">
+        Copy the ingredients from a product label or website and paste them below.
+        We'll pick out the ones in our guide and explain them.
+      </p>
+    </section>
+
+    <form id="decoder-form" class="decoder">
+      <label for="decoder-input" class="field-label">Ingredient list</label>
+      <textarea id="decoder-input" rows="6"
+        placeholder="e.g. Aqua, Glycerin, Niacinamide, Sodium Benzoate, Parfum (Fragrance)"></textarea>
+      <div class="decoder__actions">
+        <button type="submit" class="button">Decode label</button>
+        <button type="button" class="button button--ghost" id="decoder-example">Try an example</button>
+      </div>
+    </form>
+
+    <section id="decoder-results" aria-live="polite"></section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/data/categories.js"></script>
+  <script src="assets/js/data/safety-levels.js"></script>
+  <script src="assets/js/data/ingredients.js"></script>
+  <script src="assets/js/shared/helpers.js"></script>
+  <script src="assets/js/shared/site-layout.js"></script>
+  <script src="assets/js/pages/decoder.js"></script>
+</body>
+</html>

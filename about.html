@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About · What's In It?</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body data-page="about">
+  <div id="site-header"></div>
+
+  <main class="container container--narrow prose">
+    <p class="eyebrow">About</p>
+    <h1>Why this site exists</h1>
+    <p class="lead">
+      Ingredient lists are written for regulators, not for people. This site translates them
+      into plain English so you can make your own informed choices, without the scare stories
+      or the marketing spin.
+    </p>
+
+    <h2>How we describe safety</h2>
+    <p>
+      We don't give ingredients a score out of ten. Whether something is a problem depends on
+      how much of it there is, how you're exposed to it (eaten, on skin, breathed in) and who
+      you are. Instead, each ingredient gets one of three labels:
+    </p>
+    <div id="safety-legend" class="legend"></div>
+
+    <h2>Where our information comes from</h2>
+    <p>
+      We rely on regulators and scientific bodies such as Food Standards Australia New Zealand
+      (FSANZ), the Therapeutic Goods Administration (TGA), the Australian Industrial Chemicals
+      Introduction Scheme (AICIS), the European Food Safety Authority (EFSA), the US Food and Drug
+      Administration (FDA) and the World Health Organization. Every ingredient page lists its sources.
+    </p>
+
+    <h2>Food additive numbers</h2>
+    <p>
+      In Australia and New Zealand, food additives are listed by number (for example
+      <strong>621</strong> for MSG). Europe uses the same numbers with an “E” in front
+      (<strong>E621</strong>). You can search for either.
+    </p>
+
+    <h2>Important</h2>
+    <p>
+      This site is general information only. It isn't medical, legal or professional advice.
+      If you have an allergy, a health condition, or are pregnant, speak to a doctor or
+      pharmacist. Always follow the directions on product labels.
+    </p>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/data/categories.js"></script>
+  <script src="assets/js/data/safety-levels.js"></script>
+  <script src="assets/js/data/ingredients.js"></script>
+  <script src="assets/js/shared/helpers.js"></script>
+  <script src="assets/js/shared/site-layout.js"></script>
+  <script src="assets/js/pages/about.js"></script>
+</body>
+</html>

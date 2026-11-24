@@ -1,0 +1,121 @@
+/* ==========================================================================
+   layout.css — page structure: header, footer, containers, page sections.
+   ========================================================================== */
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem 4rem;
+}
+
+.container--narrow {
+  max-width: var(--max-width-narrow);
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  border-bottom: 1px solid var(--colour-line);
+  background: var(--colour-bg);
+}
+
+.site-header__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--colour-ink);
+  text-decoration: none;
+}
+
+.site-logo img { width: 30px; height: 30px; }
+
+.site-nav {
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-small);
+  color: var(--colour-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.site-nav a:hover { color: var(--colour-ink); background: var(--colour-accent-soft); }
+
+.site-nav a[aria-current="page"] {
+  color: var(--colour-accent-dark);
+  background: var(--colour-accent-soft);
+  font-weight: 600;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  border-top: 1px solid var(--colour-line);
+  color: var(--colour-muted);
+  font-size: 0.9rem;
+}
+
+.site-footer__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.site-footer p { max-width: 60ch; }
+
+/* ---------- Page sections ---------- */
+
+.hero {
+  padding: 3.5rem 0 2rem;
+  max-width: 760px;
+}
+
+.page-intro { padding: 3rem 0 1.5rem; }
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  color: var(--colour-accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.lead {
+  font-size: 1.2rem;
+  color: var(--colour-muted);
+  max-width: 62ch;
+}
+
+.prose { padding-top: 3rem; }
+.prose p { max-width: 68ch; }
+
+/* Ingredient page: main column + sidebar */
+.detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+@media (max-width: 860px) {
+  .detail-layout { grid-template-columns: 1fr; }
+}

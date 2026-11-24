@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What's In It? · Know what's in your everyday products</title>
+  <meta name="description" content="Plain-English guide to ingredients in skincare, cosmetics, food, household products and paint.">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body data-page="home">
+  <div id="site-header"></div>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">A plain-English ingredient guide</p>
+      <h1>What's actually in the things you use every day?</h1>
+      <p class="lead">
+        Look up ingredients in skincare, makeup, food, cleaning products and paint:
+        what they are, why they're there, and what the evidence says.
+      </p>
+
+      <form class="search" id="search-form" role="search">
+        <label for="search-input" class="visually-hidden">Search ingredients</label>
+        <input id="search-input" type="search" autocomplete="off"
+               placeholder="Try “niacinamide”, “621” or “bleach”">
+      </form>
+    </section>
+
+    <section aria-label="Browse ingredients">
+      <div class="chips" id="category-chips"></div>
+      <p class="results-count" id="results-count" aria-live="polite"></p>
+      <div class="card-grid" id="results"></div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <!-- Data (load first) -->
+  <script src="assets/js/data/categories.js"></script>
+  <script src="assets/js/data/safety-levels.js"></script>
+  <script src="assets/js/data/ingredients.js"></script>
+  <!-- Shared code -->
+  <script src="assets/js/shared/helpers.js"></script>
+  <script src="assets/js/shared/site-layout.js"></script>
+  <!-- This page -->
+  <script src="assets/js/pages/home.js"></script>
+</body>
+</html>
